@@ -2,24 +2,24 @@ package dec22;
 
 import java.util.Scanner;
 
-interface Printable
+interface Printable  // Interface
 {
-	void printable();
+	void printable(); //Abstract method
 }
-interface Calculate
+interface Calculate   //Interface
 {
-	int calculate();
+	int calculate();     //Abstract method
 }
-class CalculateSquare implements Printable,Calculate
+class CalculateSquare implements Printable,Calculate     //implement interfaces in class
 {
-	public int calculate()
+	public int calculate()  // Override Interface abstract method
 	{
-		Scanner sss=new Scanner(System.in);
+		Scanner sss=new Scanner(System.in);    //Input
 		int a=sss.nextInt();
 		
 		return a*a;
 	}
-	public void printable()
+	public void printable()  // Override Interface abstract method
 	{
 			System.out.println("Enter number to calculate Square");
 	}
@@ -27,35 +27,35 @@ class CalculateSquare implements Printable,Calculate
 	
 	
 }
-class CalculateCube implements Printable,Calculate
+class CalculateCube implements Printable,Calculate      //implement interfaces in class
 {
-	public int calculate()
+	public int calculate()      // Override Interface abstract method
 	{
 		System.out.println("Enter Number: ");
-		Scanner sss=new Scanner(System.in);
+		Scanner sss=new Scanner(System.in);    //Input
 		int a=sss.nextInt();
 		return a*a*a;
 	}
 
-	public void printable()
+	public void printable()       // Override Interface abstract method
 	{
 		System.out.println("Enter number to calculate cube");
 		
 	}
 	}
 
-public class TwoInterfaceSquareCube 
+public class TwoInterfaceSquareCube // class with main method
 {
 
 	public static void main(String[] args) 
 	{
 		
-		CalculateSquare cs=new CalculateSquare();
-		cs.printable();
-		System.out.println("Square of a Number is ="+cs.calculate());
-		CalculateCube cc=new CalculateCube();
-		cc.printable();
-		System.out.println("Cube of the number is ="+cc.calculate());	
+		CalculateSquare cs=new CalculateSquare();  // Object Creation
+		cs.printable();    //calling overriding method 
+		System.out.println("Square of a Number is ="+cs.calculate());//print square by calling overriden method
+		CalculateCube cc=new CalculateCube();   // Object Creation
+		cc.printable();     //calling overriding method
+		System.out.println("Cube of the number is ="+cc.calculate()); //print square by calling overriden method
 	}
 		
 }
